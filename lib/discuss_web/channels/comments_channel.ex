@@ -2,12 +2,17 @@ defmodule DiscussWeb.CommentsChannel do
   use DiscussWeb, :channel
 
   @impl true
-  def join("comments:lobby", payload, socket) do
-    if authorized?(payload) do
-      {:ok, socket}
-    else
-      {:error, %{reason: "unauthorized"}}
-    end
+  def join(name, _params, socket) do
+    IO.puts("+++++")
+    IO.puts(name)
+
+    {:ok, %{}, socket}
+
+    # if authorized?(_params) do
+    #   {:ok, socket}
+    # else
+    #   {:error, %{reason: "unauthorized"}}
+    # end
   end
 
   # Channels can be used in a request/response fashion
