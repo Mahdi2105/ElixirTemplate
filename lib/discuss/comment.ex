@@ -1,6 +1,6 @@
 defmodule Discuss.Comment do
   use Ecto.Schema
-
+  @derive {Jason.Encoder, only: [:content]}
   alias Ecto.Changeset
 
   schema "comments" do
