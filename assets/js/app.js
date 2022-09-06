@@ -21,5 +21,4 @@ liveSocket.connect();
 
 window.liveSocket = liveSocket;
 
-
-import socket from "./user_socket";
+import "./user_socket";
